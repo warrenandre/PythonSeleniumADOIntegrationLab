@@ -5,7 +5,7 @@ from PageObjects.BasePage import BasePage
 
 class HomePage(BasePage):
 
-    HEADER = (By.XPATH, '//*[contains(@class,"wp-block-group")]/p')
+    HEADER = (By.XPATH, '//*[contains(@class,"wp-block-site-title")]/a')
     SamplePageCLK = (By.XPATH, '//a[contains(text(),"Sample Page")]')
     # PROFILE_IMG = (By.CSS_SELECTOR,'[class*=header] img[alt="profile picture"]')
 
