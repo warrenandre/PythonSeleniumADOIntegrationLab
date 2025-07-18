@@ -37,6 +37,9 @@ class BasePage:
         try:
             element = WebDriverWait(self.driver, TestData.shortwait).until(EC.visibility_of_element_located(by_locator))
             return bool(element.is_displayed())
+        except TimeoutError:
+            print(f"Element not found: {by_locator}")
+            return False
         except:
             return False
 
